@@ -42,6 +42,7 @@ nav {
   height: 50px;
   display: flex;
   align-items: center;
+  z-index: 1000;
 }
 .navs {
   display: flex;
@@ -49,7 +50,70 @@ nav {
   gap: 40px;
   /* justify-content: space-evenly; */
 }
+button {
+  border: none;
+}
+.men {
+  display: none;
+}
 .menu {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.menu-content {
+  position: relative;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+}
+
+.menu a {
+  padding: 1em;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+  text-align: start;
+}
+.menu-content a:hover,
+.menu-content a:focus {
+  color: #333;
+  border-bottom: 2px solid #333;
+
+}
+.menu-content .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 30px;
+}
+.lg {
+  border: 1px solid #000;
+  width: 54px;
+  height: 64px;
+  text-align: center;
+  background: #000
+}
+.fl {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+  align-items: center;
+
+}
+input {
+  height: 20px;
+  width: 152px;
+  border-radius: 20px;
   display: none;
 }
 .topnav {
@@ -60,6 +124,9 @@ nav {
 .navs a {
   color: #000000;
   fill: rgba(0, 0, 0, 0.8);
+}
+.navz a {
+  color: #fff;
 }
 header {
   background-color: #000;
@@ -356,7 +423,7 @@ footer {
     display: flex;
     gap: 20px;
   }
-  .menu {
+  .men {
     display: block;
   }
 }
